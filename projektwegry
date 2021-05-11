@@ -1,4 +1,4 @@
-import geopandas as gp
+import pandas as gp
 
 wczytajta= gp.read_file('PD_STAT_GRID_CELL_2011.shp')
 wczytajta.to_crs('EPSG:4326')
