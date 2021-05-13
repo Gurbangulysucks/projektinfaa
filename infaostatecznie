@@ -55,3 +55,93 @@ ax3.axis('off')
 plt.axis('equal')
 plt.title('Liczba ludności w województwach w wieku 0-14')
 plt.savefig('liczba_ludnosci_wojewodztwa_wiek0-14.jpg')
+
+
+ax4 = wczytajta.plot(markersize = 1, figsize=(12, 8), column='TOT_15_64', cmap='jet')
+ax4.axis('on')
+cell2.plot(ax4=ax4, facecolor="none", edgecolor='grey')
+cell2.loc[dissolve2.index, 'TOT_15_64'] = dissolve2.TOT_15_64.values
+ax4 = cell2.plot(column='TOT_15_64', figsize=(12, 8), cmap='viridis', edgecolor="grey", legend = True)
+plt.autoscale(True)
+ax4.axis('off')
+plt.axis('equal')
+plt.title('Liczba ludności w województwach w wieku 15-64')
+plt.savefig('liczba_ludnosci_wojewodztwa_wiek15-64.jpg')
+
+ax5 = wczytajta.plot(markersize = 1, figsize=(12, 8), column='TOT_65__', cmap='jet')
+ax5.axis('on')
+cell2.plot(ax5=ax5, facecolor="none", edgecolor='grey')
+cell2.loc[dissolve2.index, 'TOT_65__'] = dissolve2.TOT_65__.values
+ax5 = cell2.plot(column='TOT_65__', figsize=(12, 8), cmap='viridis', edgecolor="grey", legend = True)
+plt.autoscale(True)
+ax5.axis('off')
+plt.axis('equal')
+plt.title('Liczba ludności w województwach w wieku powyzej 65 lat')
+plt.savefig('liczba_ludnosci_wojewodztwa_wiek65.jpg')
+
+ax6 = wczytajta.plot(markersize = 1, figsize=(12, 8), column='TOT_MALE_0_14', cmap='jet')
+ax6.axis('on')
+cell2.plot(ax6=ax6, facecolor="none", edgecolor='grey')
+cell2.loc[dissolve2.index, 'TOT_MALE_0_14'] = dissolve2.TOT_MALE_0_14.values
+ax6 = cell2.plot(column='TOT_MALE_0_14', figsize=(12, 8), cmap='viridis', edgecolor="grey", legend = True)
+plt.autoscale(True)
+ax6.axis('off')
+plt.axis('equal')
+plt.title('Liczba mezczyzn w województwach w wieku ponizej 14 lat')
+plt.savefig('liczba_mezczyzn_wojewodztwa_wiek0-14.jpg')
+
+ax7 = wczytajta.plot(markersize = 1, figsize=(12, 8), column='TOT_MALE_15_64', cmap='jet')
+ax7.axis('on')
+cell2.plot(ax7=ax7, facecolor="none", edgecolor='grey')
+cell2.loc[dissolve2.index, 'TOT_MALE_15_64'] = dissolve2.TOT_MALE_15_64.values
+ax7 = cell2.plot(column='TOT_MALE_15_64', figsize=(12, 8), cmap='viridis', edgecolor="grey", legend = True)
+plt.autoscale(True)
+ax7.axis('off')
+plt.axis('equal')
+plt.title('Liczba mezczyzn w województwach w wieku 15-64 lat')
+plt.savefig('liczba_mezczyzn_wojewodztwa_wiek15-64.jpg')
+
+ax8 = wczytajta.plot(markersize = 1, figsize=(12, 8), column='TOT_MALE_65__', cmap='jet')
+ax8.axis('on')
+cell2.plot(ax8=ax8, facecolor="none", edgecolor='grey')
+cell2.loc[dissolve2.index, 'TOT_MALE_65__'] = dissolve2.TOT_MALE_65__.values
+ax8 = cell2.plot(column='TOT_MALE_65__', figsize=(12, 8), cmap='viridis', edgecolor="grey", legend = True)
+plt.autoscale(True)
+ax8.axis('off')
+plt.axis('equal')
+plt.title('Liczba mezczyzn w województwach w wieku powyzej 65 lat')
+plt.savefig('liczba_mezczyzn_wojewodztwa_wiek65.jpg')
+
+ax9 = wczytajta.plot(markersize = 1, figsize=(12, 8), column='TOT_FEM_0_14', cmap='jet')
+ax9.axis('on')
+cell2.plot(ax9=ax9, facecolor="none", edgecolor='grey')
+cell2.loc[dissolve2.index, 'TOT_FEM_0_14'] = dissolve2.TOT_FEM_0_14.values
+ax9 = cell2.plot(column='TOT_FEM_0_14', figsize=(12, 8), cmap='viridis', edgecolor="grey", legend = True)
+plt.autoscale(True)
+ax9.axis('off')
+plt.axis('equal')
+plt.title('Liczba kobiet w województwach w wieku ponizej 14 lat')
+plt.savefig('liczba_kobiet_wojewodztwa_wiek0-14.jpg')
+
+ax10 = wczytajta.plot(markersize = 1, figsize=(12, 8), column='TOT_FEM_15_64', cmap='jet')
+ax10.axis('on')
+cell2.plot(ax10=ax10, facecolor="none", edgecolor='grey')
+cell2.loc[dissolve2.index, 'TOT_FEM_15_64'] = dissolve2.TOT_FEM_15_64.values
+ax10 = cell2.plot(column='TOT_FEM_15_64', figsize=(12, 8), cmap='viridis', edgecolor="grey", legend = True)
+plt.autoscale(True)
+ax10.axis('off')
+plt.axis('equal')
+plt.title('Liczba kobiet w województwach w wieku 15-64 lat')
+plt.savefig('liczba_kobiet_wojewodztwa_wiek15-64.jpg')
+
+ax11 = wczytajta.plot(markersize = 1, figsize=(12, 8), column='TOT_FEM_65__', cmap='jet')
+ax11.axis('on')
+cell2.plot(ax11=ax11, facecolor="none", edgecolor='grey')
+cell2.loc[dissolve2.index, 'TOT_FEM_65__'] = dissolve2.TOT_FEM_65__.values
+ax11 = cell2.plot(column='TOT_FEM_65__', figsize=(12, 8), cmap='viridis', edgecolor="grey", legend = True)
+plt.autoscale(True)
+ax11.axis('off')
+plt.axis('equal')
+plt.title('Liczba kobiet w województwach w wieku powyzej 65 lat')
+plt.savefig('liczba_kobiet_wojewodztwa_wiek65.jpg')
+
